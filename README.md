@@ -21,7 +21,7 @@ Step3: In csv_create.py file, do the pose classify with KNN method and create th
 
 **extract_images.py**- function describe as the below:   
 
-		##camera_info()##: To test basic camera view.
+		camera_info(): To test basic camera view.
 
 		imgs_to_video(): Collect images which in a specific folder and convert to a video. 
 
