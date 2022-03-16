@@ -21,7 +21,7 @@ Step3: In csv_create.py file, do the pose classify with KNN method and create th
 
 **extract_images.py**:  function describe as the below:   
 
-		**camera_info()**: To test basic camera view.
+		camera_info(): To test basic camera view.
 
 		imgs_to_video(): Collect images which in a specific folder and convert to a video. 
 
@@ -29,13 +29,13 @@ Step3: In csv_create.py file, do the pose classify with KNN method and create th
 
 **csv_create.py**:  Just modifly output path location variables:   
 
-		[bootstrap_images_in_folder]: Specific folder (e.g., extract_images) need have at least a pose class or many different pose class folder.
+		bootstrap_images_in_folder: Specific folder (e.g., extract_images) need have at least a pose class or many different pose class folder.
 
-		[bootstrap_images_out_folder]: Output folders for bootstrapped images log.
+		bootstrap_images_out_folder: Output folders for bootstrapped images log.
 
-		[bootstrap_csvs_out_folder]: Output folders for bootstrapped CSVs log.
+		bootstrap_csvs_out_folder: Output folders for bootstrapped CSVs log.
 
-		[export_csv]: The finally output pose label csv file we want.
+		export_csv: The finally output pose label csv file we want.
 		
 ## Install  
 
