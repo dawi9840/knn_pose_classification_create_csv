@@ -10,12 +10,19 @@ Using mediapipe pose model get 33 landmarks of body which input to K-NN method d
 Limit: The video contents must only have a single person.
 
 ## Usage   
-Step1: Select the a pose video and put it in **./resource/src_video** location for prepossing. And extract the video become to images by calling the **extract_images()** function in **extract_images.py**. 
+Step1:   
+  Select the a pose video and put it in **./resource/src_video** location for prepossing. And extract the video become to images by calling the **extract_images()** function in **extract_images.py**.   
+  
+		$: python extract_images.py   
 
-Step2: In location **./resource/extract_images** will find a [pose_class] folder. Select what you need to classify a pose label like up-and-down which manual pick images into two folders that named pose_class_up, pose_class_down. And delete the original [pose_class] folder.   
-E.g., [pose_class] is a folder name **jumping_jacks**. Manual pick up images into those folders from jumping_jacks folder by creating two folders named **jumping_jacks_up** and **jumping_jacks_down** in **./resource/extract_images/** location. **Finally, rember to delete jumping_jacks folder**.
+Step2:   
+  In location **./resource/extract_images** will find a [pose_class] folder. Select what you need to classify a pose label like up-and-down which manual pick images into two folders that named pose_class_up, pose_class_down. And delete the original [pose_class] folder.   
 
-Step3: In **csv_create.py** file, do the pose classify with KNN method and create the result of label.csv file.
+  E.g., [pose_class] is a folder name **jumping_jacks**. Manual pick up images into those folders from jumping_jacks folder by creating two folders named **jumping_jacks_up** and **jumping_jacks_down** in **./resource/extract_images/** location. **Finally, rember to delete jumping_jacks folder**.
+
+Step3:   
+  modifly output path location variables
+  In **csv_create.py** file, do the pose classify with KNN method and create the result of label.csv file.
 
 
 ## File description    
