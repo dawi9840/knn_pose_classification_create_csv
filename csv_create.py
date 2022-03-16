@@ -12,8 +12,8 @@ import cv2
 import tqdm
 import numpy as np
 import mediapipe as mp
-from mediapipe.python.solutions import drawing_utils as mp_drawing # mp_drawing = mp.solutions.drawing_utils # Drawing helpers.
-from mediapipe.python.solutions import pose as mp_pose             # mp_pose = mp.solutions.pose             # Mediapipe Solutions.
+from mediapipe.python.solutions import drawing_utils as mp_drawing
+from mediapipe.python.solutions import pose as mp_pose
 from matplotlib import pyplot as plt
 from PIL import Image
 from PIL import ImageFont
