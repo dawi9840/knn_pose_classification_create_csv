@@ -19,17 +19,15 @@ Step3: In csv_create.py file, do the pose classify with KNN method and create th
 
 ## File description    
 
-**extract_images.py**:    
-Function describe:   
+**extract_images.py**:  function describe as the below:   
 
-		camera_info(): To test basic camera view.
+		**camera_info()**: To test basic camera view.
 
 		imgs_to_video(): Collect images which in a specific folder and convert to a video. 
 
 		extract_images(): Input a video(or camera) to save extract images to [pose_class] folder.
 
-**csv_create.py**:   
-Just modifly output path location variables:   
+**csv_create.py**:  Just modifly output path location variables:   
 
 		[bootstrap_images_in_folder]: Specific folder (e.g., extract_images) need have at least a pose class or many different pose class folder.
 
