@@ -18,7 +18,11 @@ Step1:
 Step2:   
   In location **./resource/extract_images** will find a [pose_class] folder. Select what you need to classify a pose label like up-and-down which manual pick images into two folders that named pose_class_up, pose_class_down. And delete the original [pose_class] folder.   
 
-  E.g., [pose_class] is a folder name **jumping_jacks**. Manual pick up images into those folders from jumping_jacks folder by creating two folders named **jumping_jacks_up** and **jumping_jacks_down** in **./resource/extract_images/** location. **Finally, rember to delete jumping_jacks folder**.
+  E.g., [pose_class] is a folder name **jumping_jacks**. Manual pick up images into those folders from jumping_jacks folder by creating two folders named **jumping_jacks_up** and **jumping_jacks_down** in **./resource/extract_images/** location. **Finally, rember to delete jumping_jacks folder**. The structure will like:   
+├───resource
+│   ├───extract_images
+│   │   ├───jumping_jacks_down
+│   │   └───jumping_jacks_up     
 
 Step3:   
   modifly output path location variables
