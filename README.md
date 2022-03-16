@@ -11,7 +11,7 @@ Limit: The video contents must only have a single person.
 
 ## Usage   
 Step1:   
-  Select the a pose video and put it in **./resource/src_video** location for prepossing. And extract the video become to images by calling the **extract_images()** function in **extract_images.py**.   
+  Select the a pose video and put it in **./resource/src_video** location for prepossing. And extract the video become to images by calling the **extract_images()** function in **extract_images.py**. And run the code:      
   ```bash
 		python extract_images.py   
 ```
@@ -25,9 +25,10 @@ Step2:
 │   │   └───jumping_jacks_up     
 
 Step3:   
-  modifly output path location variables
-  In **csv_create.py** file, do the pose classify with KNN method and create the result of label.csv file.
-
+  Modify output path location variables in **csv_create.py** file. The variables: **export_csv** is a pose classify CSV file with KNN method result. When modify variables done, we can run the code:   
+  ```bash
+		python csv_create.py  
+```   
 
 ## File description    
 
@@ -39,7 +40,7 @@ Step3:
 
 		extract_images(): Input a video(or camera) to save extract images to [pose_class] folder.
 
-**csv_create.py**- Just modifly output path location variables:   
+**csv_create.py**- Just modify output path location variables:   
 
 		bootstrap_images_in_folder: Specific folder (e.g., extract_images) need have at least a pose class or many different pose class folder.
 
