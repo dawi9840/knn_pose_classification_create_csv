@@ -33,7 +33,7 @@ Step3:
 ## File description    
 
 ### extract_images.py   
-function describe as the below:   
+Function describe as the below:   
 
 **camera_info()**: To test basic camera view.
 
