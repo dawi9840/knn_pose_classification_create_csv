@@ -1,7 +1,7 @@
 # knn_pose_classification_create_csv
 Using mediapipe pose model get 33 landmarks of body which input to K-NN method do pose classification and records the result in CSV file.
 
-# folder structure:  
+## Folder structure:     
 ├───log     
 ├───resource     
 │  ├───extract_images      
@@ -9,7 +9,7 @@ Using mediapipe pose model get 33 landmarks of body which input to K-NN method d
 
 Limit: The video contents must only have a single person.
 
-# Usage
+## Usage   
 Step1: Select the pose label and  put the video in ./resource/src_video folder location for prepossing. 
 
 Step2: Extract the video become to images and define the label folder name by calling the extract_images() function in extract_images.py.
@@ -17,7 +17,7 @@ Step2: Extract the video become to images and define the label folder name by ca
 Step3: In csv_create.py file, do the pose classify with KNN method and create the result of label.csv file.
 
 
-# File description    
+## File description    
 
 **extract_images.py**:    
 Function describe:   
