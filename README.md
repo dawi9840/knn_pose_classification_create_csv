@@ -12,9 +12,9 @@ Limit: The video contents must only have a single person.
 ## Usage   
 Step1:   
   Select the a pose video and put it in **./resource/src_video** location for prepossing. And extract the video become to images by calling the **extract_images()** function in **extract_images.py**.   
-  
-		$: python extract_images.py   
-
+  ```bash
+		python extract_images.py   
+```
 Step2:   
   In location **./resource/extract_images** will find a [pose_class] folder. Select what you need to classify a pose label like up-and-down which manual pick images into two folders that named pose_class_up, pose_class_down. And delete the original [pose_class] folder.   
 
