@@ -30,25 +30,25 @@ Step3:
 		python csv_create.py  
 ```   
 
-## File description    
+### File description    
 
 **extract_images.py**- function describe as the below:   
 
-		camera_info(): To test basic camera view.
+camera_info(): To test basic camera view.
 
-		imgs_to_video(): Collect images which in a specific folder and convert to a video. 
+imgs_to_video(): Collect images which in a specific folder and convert to a video. 
 
-		extract_images(): Input a video(or camera) to save extract images to [pose_class] folder.
+extract_images(): Input a video(or camera) to save extract images to [pose_class] folder.
 
 **csv_create.py**- Just modify output path location variables:   
 
-		bootstrap_images_in_folder: Specific folder (e.g., extract_images) need have at least a pose class or many different pose class folder.
+bootstrap_images_in_folder: Specific folder (e.g., extract_images) need have at least a pose class or many different pose class folder.
 
-		bootstrap_images_out_folder: Output folders for bootstrapped images log.
+bootstrap_images_out_folder: Output folders for bootstrapped images log.
 
-		bootstrap_csvs_out_folder: Output folders for bootstrapped CSVs log.
+bootstrap_csvs_out_folder: Output folders for bootstrapped CSVs log.
 
-		export_csv: The finally output pose label csv file we want.
+export_csv: The finally output pose label csv file we want.
 		
 ## Install  
 
