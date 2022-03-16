@@ -1,7 +1,4 @@
-# To create and validate a training set 
-# for the k-NN classifier described in the MediaPipe Pose Classification soultion, test 
-# it on an arbitrary video, export to a CSV and then use it in the ML Kit sample app.
-# https://colab.research.google.com/drive/19txHpN8exWhstO6WVkfmYYVC6uug_oVR#scrollTo=swiAP0RYqqVM
+# Reference: https://colab.research.google.com/drive/19txHpN8exWhstO6WVkfmYYVC6uug_oVR#scrollTo=swiAP0RYqqVM
 
 import os
 import io
