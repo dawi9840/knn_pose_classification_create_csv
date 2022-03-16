@@ -123,17 +123,17 @@ def imgs_to_video(input_imgs_floder:str, output_video:str):
 
 def main():
     img_path = [
-        './resource/src_image/img_knee_to_chest.png',
+        './resource/src_image/image_004.jpg',
     ]
     video_path = [
         0, # your camera number
-        './resource/src_video/Jab_Cross_01.mp4',
+        './resource/src_video/jumping_jacks_23s.mp4',
     ]
 
     # Example usage:
     # camera_info(cap_index=video_path[0], set_cap_w=1280, set_cap_h=720, save_output=None)
-    imgs_to_video(input_imgs_floder='./resource/src_image/*.jpg', output_video='imgs_merge_to_video.mp4')
-    # extract_images(cap_index=video_path[1], pose_class='Jab_Cross_01')
+    # imgs_to_video(input_imgs_floder='./resource/src_image/*.jpg', output_video='imgs_merge_to_video.mp4')
+    extract_images(cap_index=video_path[1], pose_class='jumping_jacks')
 
 
 if __name__ == '__main__':
