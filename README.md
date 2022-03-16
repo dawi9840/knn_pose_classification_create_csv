@@ -1,11 +1,11 @@
 # knn_pose_classification_create_csv
 Using mediapipe pose model get 33 landmarks of body which input to K-NN method do pose classification and records the result in CSV file.
 
-folder structure:
-├───log
-├───resource
-│   ├───extract_images 
-│   └───src_video
+folder structure:  
+├───log  
+├───resource  
+│   ├───extract_images   
+│   └───src_video  
 
 Limit: The video contents must only have a single person.
 
