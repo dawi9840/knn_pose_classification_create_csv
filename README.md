@@ -31,7 +31,7 @@ Limit: The video contents must only have a single person.
 		│   │   └───jumping_jacks_up     
 
 *   Step3:   
-  Modify output path location variables in **csv_create.py** file. The variables: **export_csv** is a pose classify CSV file with KNN method result. When modify variables done, we can run the code:   
+  Modify output path location variables in **csv_create.py** file. The variable, **export_csv** is a pose classify CSV file with KNN method result. When modify variables done, we can run the code:   
   ```bash
 		python csv_create.py  
 ```   
