@@ -1,5 +1,5 @@
 # knn_pose_classification_create_csv
-Using MediaPipe Pose Classification soultion to get 33 landmarks of body which create and validate a training set for the k-NN classifier., and export result to a CSV. The purposeis is use it in the [ML Kit sample app](https://developers.google.com/ml-kit/vision/pose-detection/classifying-poses#4_integrate_with_the_ml_kit_quickstart_app). 
+Using MediaPipe Pose Classification soultion to get 33 landmarks of body which create and validate a training set for the k-NN classifier, and export result to a CSV. The purposeis is use it in the [ML Kit sample app](https://developers.google.com/ml-kit/vision/pose-detection/classifying-poses#4_integrate_with_the_ml_kit_quickstart_app). 
 
 
 ## Folder structure:     
