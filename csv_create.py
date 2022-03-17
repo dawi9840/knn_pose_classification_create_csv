@@ -1,5 +1,5 @@
 # Reference: https://colab.research.google.com/drive/19txHpN8exWhstO6WVkfmYYVC6uug_oVR#scrollTo=swiAP0RYqqVM
-# Step 1: Build classifier
+# Build classifier and export CSV.
 
 import os
 import csv
