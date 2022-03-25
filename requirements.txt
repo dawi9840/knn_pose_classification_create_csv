@@ -1,0 +1,7 @@
+numpy==1.19.3
+opencv-python==4.5.1.48
+tqdm==4.56.0
+pillow==8.1.0
+matplotlib==3.3.4
+requests==2.25.1
+mediapipe==0.8.3
