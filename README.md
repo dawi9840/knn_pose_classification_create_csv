@@ -8,7 +8,7 @@ Using MediaPipe Pose Classification soultion to get 33 landmarks of body which c
 │  ├───extract_images      
 │  └───src_video     
 
-*   Limit:   
+**Video limit:**   
     1.Pose type prefer counting style.   
     2.Video length is around 30 seconds.   
     3. Input video view only have one person.   
