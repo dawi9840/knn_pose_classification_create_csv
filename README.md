@@ -64,11 +64,5 @@ Just modify output path location variables:
 
 conda create --name [env_name]  python=3.8
 conda activate [env_name]
-pip install numpy==1.19.3
-pip install opencv-python==4.5.1.48
-pip install tqdm==4.56.0
-pip install pillow==8.1.0
-pip install matplotlib==3.3.4
-pip install requests==2.25.1
-pip install mediapipe==0.8.3
+pip install -r requirements.txt
 ```   
