@@ -67,7 +67,9 @@ Click 'Imgs log' and 'CSVs log' buttons to set path log. This steps are preparin
 Key the output words to name an export file  in 'Set file'. Notice the file format is **'.csv'**. If all progresses complete made, the status will hint extract done detail information.    
 
 The usage version 2 demo as the follow:     
-
+<div align="center">
+<img src="https://user-images.githubusercontent.com/19554347/162137889-870bc74f-2edd-43bb-90f0-e6eca8acec75.png" alt="GUI version" >
+</div>    
 
 ## File description    
 
