@@ -14,12 +14,12 @@ Using MediaPipe Pose Classification soultion to get 33 landmarks of body which c
 3. Input video view only have one person.   
 
 ## Usage version 1      
-*   Step1:   
+*   Step 1:   
   Select the a pose video and put it in **./resource/src_video** location for prepossing. And extract the video become to images by calling the **extract_images()** function in **extract_images.py**. And run the code:      
   ```bash
 		python extract_images.py   
 ```
-*   Step2:   
+*   Step 2:   
   In location **./resource/extract_images** will find a [pose_class] folder. Select what you need to classify a pose label like up-and-down which manual pick images into two folders that named **pose_class_up**, **pose_class_down**. And delete the original [pose_class] folder.   
         
 		E.g., [pose_class] is a folder name 'jumping_jacks'. Manual pick up images into those folders from jumping_jacks folder by   
@@ -32,12 +32,28 @@ Using MediaPipe Pose Classification soultion to get 33 landmarks of body which c
 		│   │   ├───jumping_jacks_down   
 		│   │   └───jumping_jacks_up     
 
-*   Step3:   
+*   Step 3:   
   Modify output path location variables in **csv_create.py** file. The variable, **export_csv** is a pose classify CSV file with KNN method result. When modify variables done, we can run the code:   
   ```bash
 		python csv_create.py  
 ```   
+## Usage version 2  
+*   Run the code:
+We will see the all functions for version 1 from extract images to export CSV files with GUI. 
+  ```bash
+		python csv_create_GUI.py  
+```   
+*   Step 1:   
+Input the words create a pose, and click the button 'Extract pose'. That will help you to select the source video and extract video become to images in a renamed (your input words) folder. If extract progress is made, the status will hint 'Extract done!'.   
 
+*   Step 2-1:
+Click the 'Path select' button, and select the extract images folder. The target path will hint the complete path **./resource/extract_images**.   
+
+*   Step 2-2:   
+This step creates two status label on a pose, e.g., up-and-down. To 'Submit' button to create two states in 'pose 01' and 'pose 02', and **notice the pose state words must add '_' string in middle between poses and status**. The pose word just follow the step 1 you created.   
+
+*   Step 2-3:   
+If made the step 2-1 to step 2-2 done, we can click 'Classify' button go to the new window 'pose classify'. E.g., In step 1 create **jumping jack** pose, and step 2-2 input the **jumping jack_up** and **jumping jack_up** to submit folders. After press 'Classify' button, we will go to new window. Click **Check Status** button to refresh images display. And would be see the two button **jumping jack_up** and **jumping jack_up**. You can see the image to decide pose status (click up or down button) and then remember click the 'Check Status' button to refresh the image panel. Press 'Check Status' button will close the window and go back the export window when images status all you classified.   
 ## File description    
 
 ### extract_images.py   
