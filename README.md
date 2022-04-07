@@ -13,7 +13,7 @@ Using MediaPipe Pose Classification soultion to get 33 landmarks of body which c
 2.Video length is around 30 seconds.   
 3. Input video view only have one person.   
 
-## Usage   
+## Usage version 1      
 *   Step1:   
   Select the a pose video and put it in **./resource/src_video** location for prepossing. And extract the video become to images by calling the **extract_images()** function in **extract_images.py**. And run the code:      
   ```bash
