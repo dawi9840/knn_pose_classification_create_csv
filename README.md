@@ -55,12 +55,15 @@ This step creates two status label on a pose, e.g., up-and-down. To 'Submit' but
 *   Step 2-3:   
 If made the step 2-1 to step 2-2 done, we can click 'Classify' button go to the new window 'pose classify'. E.g., In step 1 create **jumping jack** pose, and step 2-2 input the **jumping jack_up** and **jumping jack_up** to submit folders. After press 'Classify' button, we will go to new window. Click **Check Status** button to refresh images display. And would be see the two button **jumping jack_up** and **jumping jack_up**.   
 You can see the image to decide pose status (click up or down button) and then remember click the 'Check Status' button to refresh the image panel. Press 'Check Status' button will close the window and go back the export window when images status all you classified.      
+
 <div align="center">
 <img src="https://user-images.githubusercontent.com/19554347/162129252-650c976e-69a2-4020-8a06-c585ee945979.png" width="591px" height="448px" alt="Pose Classify Window" >
 </div>
-*   Step 3-1 and Step 3-2:   
-Press 'Imgs log' and 'CSVs log' buttons to set path log. This steps are preparing for step 3-3 export result CSV file to debug.
+*   Step 3-1 and Step 3-2:    
+Click 'Imgs log' and 'CSVs log' buttons to set path log. This steps are preparing for step 3-3 export result CSV file to debug.   
 
+*   Step 3-3:   
+Key the output words to name an export file  in 'Set file'. Notice the file format is **'.csv'**. If all progresses complete made, the status will hint extract done detail information.    
 
 ## File description    
 
