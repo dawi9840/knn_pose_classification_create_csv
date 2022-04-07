@@ -44,10 +44,7 @@ We will see the all functions for version 1 from extract images to export CSV fi
 		python csv_create_GUI.py  
 ```   
 *   Step 1:   
-Input the words create a pose, and click the button 'Extract pose'. That will help you to select the source video and extract video become to images in a renamed (your input words) folder. If extract progress is made, the status will hint 'Extract done!'.  E.g.,    
-<div align="center">
-<img src="https://user-images.githubusercontent.com/19554347/162134888-dcaef1b4-3f68-49fb-b5a1-1d19670f596e.png" alt="Extract done" >
-</div>      
+Input the words create a pose, and click the button 'Extract pose'. That will help you to select the source video and extract video become to images in a renamed (your input words) folder. If extract progress is made, the status will hint 'Extract done!'.    
 
 *   Step 2-1:   
 Click the 'Path select' button, and select the extract images folder. The target path will hint the complete path **./resource/extract_images**.   
@@ -68,6 +65,9 @@ Click 'Imgs log' and 'CSVs log' buttons to set path log. This steps are preparin
 
 *   Step 3-3:   
 Key the output words to name an export file  in 'Set file'. Notice the file format is **'.csv'**. If all progresses complete made, the status will hint extract done detail information.    
+
+The usage version 2 demo as the follow:     
+
 
 ## File description    
 
