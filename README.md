@@ -58,7 +58,8 @@ You can see the image to decide pose status (click up or down button) and then r
 
 <div align="center">
 <img src="https://user-images.githubusercontent.com/19554347/162129252-650c976e-69a2-4020-8a06-c585ee945979.png" width="591px" height="448px" alt="Pose Classify Window" >
-</div>
+</div>   
+
 *   Step 3-1 and Step 3-2:    
 Click 'Imgs log' and 'CSVs log' buttons to set path log. This steps are preparing for step 3-3 export result CSV file to debug.   
 
