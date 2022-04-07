@@ -46,7 +46,7 @@ We will see the all functions for version 1 from extract images to export CSV fi
 *   Step 1:   
 Input the words create a pose, and click the button 'Extract pose'. That will help you to select the source video and extract video become to images in a renamed (your input words) folder. If extract progress is made, the status will hint 'Extract done!'.   
 
-*   Step 2-1:
+*   Step 2-1:   
 Click the 'Path select' button, and select the extract images folder. The target path will hint the complete path **./resource/extract_images**.   
 
 *   Step 2-2:   
@@ -54,6 +54,7 @@ This step creates two status label on a pose, e.g., up-and-down. To 'Submit' but
 
 *   Step 2-3:   
 If made the step 2-1 to step 2-2 done, we can click 'Classify' button go to the new window 'pose classify'. E.g., In step 1 create **jumping jack** pose, and step 2-2 input the **jumping jack_up** and **jumping jack_up** to submit folders. After press 'Classify' button, we will go to new window. Click **Check Status** button to refresh images display. And would be see the two button **jumping jack_up** and **jumping jack_up**. You can see the image to decide pose status (click up or down button) and then remember click the 'Check Status' button to refresh the image panel. Press 'Check Status' button will close the window and go back the export window when images status all you classified.   
+
 ## File description    
 
 ### extract_images.py   
