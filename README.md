@@ -18,7 +18,7 @@ Using MediaPipe Pose Classification soultion to get 33 landmarks of body which c
   Select the a pose video and put it in **./resource/src_video** location for prepossing. And extract the video become to images by calling the **extract_images()** function in **extract_images.py**. And run the code:      
   ```bash
 		python extract_images.py   
-```
+```   
 *   Step 2:   
   In location **./resource/extract_images** will find a [pose_class] folder. Select what you need to classify a pose label like up-and-down which manual pick images into two folders that named **pose_class_up**, **pose_class_down**. And delete the original [pose_class] folder.   
         
@@ -44,7 +44,10 @@ We will see the all functions for version 1 from extract images to export CSV fi
 		python csv_create_GUI.py  
 ```   
 *   Step 1:   
-Input the words create a pose, and click the button 'Extract pose'. That will help you to select the source video and extract video become to images in a renamed (your input words) folder. If extract progress is made, the status will hint 'Extract done!'.   
+Input the words create a pose, and click the button 'Extract pose'. That will help you to select the source video and extract video become to images in a renamed (your input words) folder. If extract progress is made, the status will hint 'Extract done!'.  E.g.,    
+<div align="center">
+<img src="https://user-images.githubusercontent.com/19554347/162134888-dcaef1b4-3f68-49fb-b5a1-1d19670f596e.png" alt="Extract done" >
+</div>      
 
 *   Step 2-1:   
 Click the 'Path select' button, and select the extract images folder. The target path will hint the complete path **./resource/extract_images**.   
