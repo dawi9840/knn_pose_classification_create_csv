@@ -27,7 +27,6 @@ def main():
         window.destroy()
 
     def get_select_folder_name():
-        # https://stackoverflow.com/questions/28373288/get-file-path-from-askopenfilename-function-in-tkinter
         file = fd.askopenfile()
         if file: 
             return file.name
@@ -37,9 +36,7 @@ def main():
         path.set(path_)
  
     def create_file():  
-        # print(f'folder_name1: {folder.get()}')
-        # print(f'folder_name2: {folder2.get()}')
-        # print(f'path_name: {path.get()}')
+        # To get creating 2 types of pose and path string.
         dirs = os.path.join(path.get(), folder.get())
         dirs2 = os.path.join(path.get(), folder2.get())
 
@@ -84,6 +81,7 @@ def main():
         result_step3_3 = step3_3_input_text.get("1.0","end")
         text_result_step3_3 = result_step3_3.replace('\n', '')
 
+        # Check input result_step3_3 text format is '.csv'.
         if text_result_step3_3[-4:len(text_result_step3_3)] == '.csv':
             export_csv_path_ = fd.askdirectory()
             export_csv_path.set(export_csv_path_)
@@ -91,7 +89,6 @@ def main():
 
             if len(step3_3_path) > 2:
                 export_result_file = step3_3_path + '/' + text_result_step3_3
-                # print(f'export_result_file: {export_result_file}')
 
                 export_CSV(
                     bootstrap_images_in_folder=str(path.get()), 
@@ -172,13 +169,10 @@ def main():
 
     def get_imgs_list(img_path:str):       
         # Get file names from directory.
-        # img_path = 'C:/Users/user/Desktop/knn_pose_classification_create_csv/resource/extract_images/Jab_Cross_down'
-        # img_path = str(path.get()) + '/' + pose_name
         file_list = os.listdir(img_path)
-        # print (f'file_list: {file_list[0]}')
 
         if not file_list :
-            print("Directory is empty")
+            print('Directory is empty.')
             return 0
         else:
             return file_list
@@ -188,9 +182,6 @@ def main():
         set01, set02 = set(str1.split('_')), set(str2.split('_'))
         same_dict = set01 & set02
         same_str = ''.join(same_dict)
-        # print(f'input1: {str1}, type:{type(str1)}\ninput2: {str2}, type:{type(str2)}')
-        # print(f'\nset01: {set01}\nset02: {set02}')
-        # print(f'\nsame_str: {same_str}, type: {type(same_str)}')
         return same_str
 
     def open_new_window():
@@ -204,29 +195,15 @@ def main():
         def move_image(src_file, dest_file):
             # Move src_file image to dest_file location.
             shutil.move(src_file, dest_file)
-            # print(f'\nsrc_file: {src_file}')
-            # print(f'dest_file: {dest_file}')
             print('Move1 done!')
 
-        def btn_show_img(img_panel):
-            # img_path = extract_imgs_path + '/' + choose_pose + '/' + img_file_name[2]
-            bbbbb = 'C:/Users/user/Desktop/knn_pose_classification_create_csv/002.jpg'
-            print(f'\npose2: {bbbbb}')
-
-            p2_img = Image.open(bbbbb)
-            p2_img = p2_img.resize((350, 350), Image.ANTIALIAS)
-            p2_img = ImageTk.PhotoImage(p2_img)
-
-            img_panel.configure(image=p2_img)
-            img_panel.image = p2_img
-    
         def check_status():
-            # './resource/extract_images/Jab_Cross_down/Jab_Cross052.jpg'
+            # E.g., './resource/extract_images/Jab_Cross_down/Jab_Cross052.jpg'
             img_path = str(path.get()) + '/' + choose_pose
             img_file_name = get_imgs_list(img_path)
 
             if img_file_name == 0:
-                new_lab1 = tk.Label(new_window, text=choose_pose, width=t_w1, font=(font_type, font_size))
+                new_lab1 = tk.Label(new_window, text=choose_pose, width=column1_width, font=(font_type, font_size))
                 new_lab2 = tk.Label(new_window, text='Folder image is empty.', font=(font_type, font_size))
                 shutil.rmtree(img_path, ignore_errors=True)
                 print('Remove original folder done.')
@@ -240,21 +217,21 @@ def main():
             else:
                 img_path = extract_imgs_path + '/' + choose_pose + '/' + img_file_name[0]
 
-                # the enumerate object
+                # The enumerate object.
                 enumerate_object = enumerate(img_file_name)
-                # first iteration from enumerate(enumerate_object)
+                # First iteration from enumerate(enumerate_object).
                 iteration = next(enumerate_object) 
                 index, item = iteration
-                # print(f'item: {item}')
 
                 src_file = extract_imgs_path + '/' + choose_pose + '/' + item
                 dest_file1 = pose01_path + '/' + item
                 dest_file2 = pose02_path + '/' + item
 
                 # Image label components.
-                new_lab1 = tk.Label(new_window, text=choose_pose, width=t_w1, font=(font_type, font_size))
-                # new_lab2 = tk.Label(new_window, text=img_path, font=(font_type, font_size))
-                new_lab2 = tk.Label(new_window, text=item, font=(font_type, font_size))
+                new_lab1 = tk.Label(new_window, text=choose_pose, width=column1_width, font=(font_type, font_size))
+
+                # new_lab2 label text could  also set img_path to display complete path(text=img_path).
+                new_lab2 = tk.Label(new_window, text=item, font=(font_type, font_size)) 
 
                 p2_img = Image.open(img_path)
                 p2_img = p2_img.resize((350, 350), Image.ANTIALIAS)
@@ -266,14 +243,14 @@ def main():
                 # Button components.
                 new_btn2 = tk.Button(
                     new_window, text=pose01, 
-                    width=t_w3+2, height=btn_h_size+1, 
+                    width=column3_width+2, height=btn_h_size+1, 
                     bg='red', fg='yellow', 
                     font=(font_type, font_size), 
                     command=lambda: move_image(src_file=src_file, dest_file=dest_file1))
 
                 new_btn3 = tk.Button(
                     new_window, text=pose02, 
-                    width=t_w3+2, height=btn_h_size+1, 
+                    width=column3_width+2, height=btn_h_size+1, 
                     bg='blue', fg='yellow', 
                     font=(font_type, font_size), 
                     command=lambda: move_image(src_file=src_file, dest_file=dest_file2))
@@ -289,13 +266,11 @@ def main():
 
         if os.path.exists(pose01_path) and len(pose01) > 1:
             control_mode = 1
-            # print(f'\npose01_path: {pose01_path}')
         else:
             tkinter.messagebox.showerror('Tips','Check step 2-2 folder path is correct.')
 
         if os.path.exists(pose02_path) and len(pose02) > 1:
             control_mode = 1
-            # print(f'pose02_path: {pose02_path}')
         else:
             tkinter.messagebox.showerror('Tips','Check step 2-2 folder path is correct.')
 
@@ -316,24 +291,23 @@ def main():
                 new_window.config(cursor=cursors_lst[11])
                 
                 new_btn0 = tk.Button(
-                    new_window, text='Check Status', width=t_w3+20, 
+                    new_window, text='Check Status', width=column3_width+20, 
                     height=btn_h_size+1, bg='grey', fg='white', 
                     font=(font_type, font_size), 
                     command=check_status)
                 new_btn0.place(x=15, y=435)
-
             else:
                 tkinter.messagebox.showerror('Tips','Please check step 2-2.')
         else:
-            print('Please assign step2-1 path.')
             tkinter.messagebox.showerror('Tips','Please assign step 2-1 path.')
             print(f'extract_imgs_path: {extract_imgs_path}')
+            print('Please assign step2-1 path.')
 
     # Global variables ---------------------------------------------------------
-    t_w1, t_w2, t_w3 = 10, 15, 13
-    font_size, btn_h_size = 15, 1
-    entry_width = 107
+    column1_width, column2_width, column3_width = 10, 15, 13
+    entry_width, btn_h_size = 107, 1
     font_type = 'Calibri'
+    font_size = 15
 
     # Receiving user's file_path selection.
     path = tk.StringVar()   
@@ -348,51 +322,49 @@ def main():
     export_csv_path = tk.StringVar()
 
     # window GUI components ---------------------------------------------------------
-    step1_lab = tk.Label(window, text='step 1:', width=t_w1, font=(font_type, font_size))
-    step1_lab_a = tk.Label(window,text='Class create:', width=t_w2)
-    step1_btn = tk.Button(window, text='Extract pose', width=t_w3, height=btn_h_size, bg='green', fg='yellow',  font=(font_type, font_size), command=get_extract_images)
+    step1_lab = tk.Label(window, text='step 1:', width=column1_width, font=(font_type, font_size))
+    step1_lab_a = tk.Label(window,text='Class create:', width=column2_width)
+    step1_btn = tk.Button(window, text='Extract pose', width=column3_width, height=btn_h_size, bg='green', fg='yellow',  font=(font_type, font_size), command=get_extract_images)
     step1_input_text = tk.Text(window, width=entry_width, height=1)
-    step1_2_lab_a = tk.Label(window,text='Status:', width=t_w2)
+    step1_2_lab_a = tk.Label(window,text='Status:', width=column2_width)
 
-    space_lab0 = tk.Label(window, text='  ', font=(font_type, font_size))
     space_lab1 = tk.Label(window, text='  ', font=(font_type, font_size))
 
-    step2_1_lab = tk.Label(window, text='step 2-1:', width=t_w1, font=(font_type, font_size))
-    step2_1_lab_a = tk.Label(window,text='Target path:', width=t_w2)
-    step2_1_btn = tk.Button(window, text='Path select', width=t_w3, height=btn_h_size, bg='blue', fg='yellow', font=(font_type, font_size), command=select_path)
+    step2_1_lab = tk.Label(window, text='step 2-1:', width=column1_width, font=(font_type, font_size))
+    step2_1_lab_a = tk.Label(window,text='Target path:', width=column2_width)
+    step2_1_btn = tk.Button(window, text='Path select', width=column3_width, height=btn_h_size, bg='blue', fg='yellow', font=(font_type, font_size), command=select_path)
     step2_1_entry = tk.Entry(window, width=entry_width, textvariable=path)
 
-    step2_2_lab = tk.Label(window, text='step 2-2:', width=t_w1, font=(font_type, font_size))
-    step2_2_lab_a = tk.Label(window,text='Pose 01:', width=t_w2)
-    step2_2_btn = tk.Button(window, text='Submit', width=t_w3, height=btn_h_size, bg='blue', fg='yellow', font=(font_type, font_size), command=create_file)
+    step2_2_lab = tk.Label(window, text='step 2-2:', width=column1_width, font=(font_type, font_size))
+    step2_2_lab_a = tk.Label(window,text='Pose 01:', width=column2_width)
+    step2_2_btn = tk.Button(window, text='Submit', width=column3_width, height=btn_h_size, bg='blue', fg='yellow', font=(font_type, font_size), command=create_file)
     step2_2_entry = tk.Entry(window, width=entry_width, textvariable=folder)
-
-    step2_2_b_lab_a = tk.Label(window,text='Pose 02:', width=t_w2)
+    step2_2_b_lab_a = tk.Label(window,text='Pose 02:', width=column2_width)
     step2_2_b_entry = tk.Entry(window, width=entry_width, textvariable=folder2)
 
-    step2_3_lab = tk.Label(window, text='step 2-3:', width=t_w1, font=(font_type, font_size))
-    step2_3_btn = tk.Button(window, text='Classify', width=t_w3, height=btn_h_size, bg='blue', fg='yellow', font=(font_type, font_size), command=open_new_window)
+    step2_3_lab = tk.Label(window, text='step 2-3:', width=column1_width, font=(font_type, font_size))
+    step2_3_btn = tk.Button(window, text='Classify', width=column3_width, height=btn_h_size, bg='blue', fg='yellow', font=(font_type, font_size), command=open_new_window)
 
     space_lab2 = tk.Label(window, text='  ', font=(font_type, font_size))
 
-    step3_1_lab = tk.Label(window, text='step 3-1:', width=t_w1, font=(font_type, font_size))
-    step3_1_lab_a = tk.Label(window,text='Set path:', width=t_w2)
-    step3_1_btn = tk.Button(window, text='Imgs log', width=t_w3, height=btn_h_size, bg='purple', fg='yellow', font=(font_type, font_size), command=select_imgs_log_folder)
+    step3_1_lab = tk.Label(window, text='step 3-1:', width=column1_width, font=(font_type, font_size))
+    step3_1_lab_a = tk.Label(window,text='Set path:', width=column2_width)
+    step3_1_btn = tk.Button(window, text='Imgs log', width=column3_width, height=btn_h_size, bg='purple', fg='yellow', font=(font_type, font_size), command=select_imgs_log_folder)
     step3_1_entry = tk.Entry(window, width=entry_width, textvariable=knn_out_imgs_log)
 
-    step3_2_lab = tk.Label(window, text='step 3-2:', width=t_w1, font=(font_type, font_size))
-    step3_2_lab_a = tk.Label(window,text='Set path:', width=t_w2)
-    step3_2_btn = tk.Button(window, text='CSVs log', width=t_w3, height=btn_h_size, bg='purple', fg='yellow', font=(font_type, font_size), command=select_csvs_log_folder)
+    step3_2_lab = tk.Label(window, text='step 3-2:', width=column1_width, font=(font_type, font_size))
+    step3_2_lab_a = tk.Label(window,text='Set path:', width=column2_width)
+    step3_2_btn = tk.Button(window, text='CSVs log', width=column3_width, height=btn_h_size, bg='purple', fg='yellow', font=(font_type, font_size), command=select_csvs_log_folder)
     step3_2_entry = tk.Entry(window, width=entry_width, textvariable=knn_out_csvs_log)
 
-    step3_3_lab = tk.Label(window, text='step 3-3:', width=t_w1, font=(font_type, font_size))
-    step3_3_lab_a = tk.Label(window,text='Set file:', width=t_w2)
-    step3_3_btn = tk.Button(window, text='  Export CSV ',  width=t_w3, height=btn_h_size, bg='purple', fg='yellow', font=(font_type, font_size), command=set_export_csv)
+    step3_3_lab = tk.Label(window, text='step 3-3:', width=column1_width, font=(font_type, font_size))
+    step3_3_lab_a = tk.Label(window,text='Set file:', width=column2_width)
+    step3_3_btn = tk.Button(window, text='  Export CSV ',  width=column3_width, height=btn_h_size, bg='purple', fg='yellow', font=(font_type, font_size), command=set_export_csv)
     step3_3_input_text =tk.Text(window, width=entry_width, height=1)
-    step3_4_lab_a = tk.Label(window,text='Status:', width=t_w2)
+    step3_4_lab_a = tk.Label(window,text='Status:', width=column2_width)
 
     space_lab3 = tk.Label(window, text='  ', font=(font_type, font_size))
-    exit_btn = tk.Button(window, text='Exit',  width=t_w3, height=btn_h_size, bg='pink', fg='red', font=(font_type, font_size), command=del_window)
+    exit_btn = tk.Button(window, text='Exit',  width=column3_width, height=btn_h_size, bg='pink', fg='red', font=(font_type, font_size), command=del_window)
 
     # window GUI layout ---------------------------------------------------------
     position_column, position_row = 0, 1
@@ -402,7 +374,6 @@ def main():
     step1_input_text.grid(column=position_column+3, row=position_row, columnspan=30)
     step1_2_lab_a.grid(column=position_column+2, row=position_row+1)
 
-    space_lab0.grid(column=position_column, row=position_row+1)
     space_lab1.grid(column=position_column, row=position_row+2)
 
     step2_1_lab.grid(column=0, row=position_row+3)
@@ -414,7 +385,6 @@ def main():
     step2_2_lab_a.grid(column=position_column+2, row=position_row+4)
     step2_2_btn.grid(column=position_column+1, row=position_row+4)
     step2_2_entry.grid(column=position_column+3, row=position_row+4, columnspan=30)
-
     step2_2_b_lab_a.grid(column=position_column+2, row=position_row+5)
     step2_2_b_entry.grid(column=position_column+3, row=position_row+5, columnspan=30)
 
